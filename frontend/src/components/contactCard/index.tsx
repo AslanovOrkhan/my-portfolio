@@ -16,37 +16,39 @@ export default function ContactCard({
   email,
 }: ContactCardProps) {
   return (
-    <div className="bg-[#212121] rounded-lg overflow-hidden">
-      <img
-        src={image}
-        alt={name}
-        className="w-full h-64 object-cover"
-      />
-      <div className="p-8">
-        <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
-        <p className="text-gray-400 text-sm mb-4">{position}</p>
-        <p className="text-gray-300 mb-6 leading-relaxed">{description}</p>
+    <div className="bg-[#212121] rounded-2xl overflow-hidden">
+      <div className="bg-transparent lg:p-6 px-3 py-5 rounded-2xl">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-72 object-cover rounded-2xl"
+        />
+      </div>
+      <div className="lg:p-8 px-3 py-6">
+        <h3 className="text-2xl font-bold text-white mb-1">{name}</h3>
+        <p className="text-[#878e99] text-sm mb-5">{position}</p>
+        <p className="text-[#c4cfde] mb-6 leading-relaxed">{description}</p>
         
-        <div className="space-y-2 mb-6">
-          <p className="text-gray-300">
-            <span className="text-gray-400">Phone:</span>{" "}
-            <span className="text-white">{phone}</span>
+        <div className="space-y-3 mb-6">
+          <p className="text-[#c4cfde]">
+            <span className="text-[#878e99]">Phone:</span>{" "}
+            <span className="text-[#c4cfde]">{phone}</span>
           </p>
-          <p className="text-gray-300">
-            <span className="text-gray-400">Email:</span>{" "}
-            <span className="text-white">{email}</span>
+          <p className="text-[#c4cfde]">
+            <span className="text-[#878e99]">Email:</span>{" "}
+            <span className="text-[#c4cfde]">{email}</span>
           </p>
         </div>
 
         <div>
-          <p className="text-gray-400 text-sm mb-3 uppercase tracking-wider">Find With Me</p>
-          <div className="flex gap-4">
+          <p className="text-[#878e99] text-xs mb-4 uppercase tracking-wider">FIND WITH ME</p>
+          <div className="flex gap-3">
             <a
               href="#"
-              className="bg-[#1a1a1a] p-4 rounded-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 transition-all duration-300 group"
+              className="bg-[#1a1a1a] w-14 h-14 flex items-center justify-center rounded-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 transition-all duration-300 group"
             >
               <svg
-                className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
+                className="w-5 h-5 text-[#c4cfde] group-hover:text-white transition-colors"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -55,10 +57,10 @@ export default function ContactCard({
             </a>
             <a
               href="#"
-              className="bg-[#1a1a1a] p-4 rounded-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 transition-all duration-300 group"
+              className="bg-[#1a1a1a] w-14 h-14 flex items-center justify-center rounded-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 transition-all duration-300 group"
             >
               <svg
-                className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
+                className="w-5 h-5 text-[#c4cfde] group-hover:text-white transition-colors"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -67,10 +69,10 @@ export default function ContactCard({
             </a>
             <a
               href="#"
-              className="bg-[#1a1a1a] p-4 rounded-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 transition-all duration-300 group"
+              className="bg-[#1a1a1a] w-14 h-14 flex items-center justify-center rounded-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 transition-all duration-300 group"
             >
               <svg
-                className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
+                className="w-5 h-5 text-[#c4cfde] group-hover:text-white transition-colors"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

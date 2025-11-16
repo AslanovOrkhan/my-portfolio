@@ -70,7 +70,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {errors.form && (
-        <p className="text-[#ff6b6b] text-sm">
+        <p className="text-cyan-400 text-sm">
           One or more fields have an error. Please check and try again.
         </p>
       )}
@@ -86,11 +86,11 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className={`w-full bg-transparent border ${
-              errors.name ? "border-[#ff6b6b]" : "border-gray-700"
+              errors.name ? "border-cyan-400" : "border-gray-700"
             } rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors`}
           />
           {errors.name && (
-            <p className="text-[#ff6b6b] text-xs mt-1">This field is required.</p>
+            <p className="text-cyan-400 text-xs mt-1">This field is required.</p>
           )}
         </div>
 
@@ -118,11 +118,11 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           className={`w-full bg-transparent border ${
-            errors.email ? "border-[#ff6b6b]" : "border-gray-700"
+            errors.email ? "border-cyan-400" : "border-gray-700"
           } rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors`}
         />
         {errors.email && (
-          <p className="text-[#ff6b6b] text-xs mt-1">This field is required.</p>
+          <p className="text-cyan-400 text-xs mt-1">This field is required.</p>
         )}
       </div>
 
@@ -136,11 +136,11 @@ export default function ContactForm() {
           value={formData.subject}
           onChange={handleChange}
           className={`w-full bg-transparent border ${
-            errors.subject ? "border-[#ff6b6b]" : "border-gray-700"
+            errors.subject ? "border-cyan-400" : "border-gray-700"
           } rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors`}
         />
         {errors.subject && (
-          <p className="text-[#ff6b6b] text-xs mt-1">This field is required.</p>
+          <p className="text-cyan-400 text-xs mt-1">This field is required.</p>
         )}
       </div>
 
@@ -154,16 +154,16 @@ export default function ContactForm() {
           onChange={handleChange}
           rows={8}
           className={`w-full bg-transparent border ${
-            errors.message ? "border-[#ff6b6b]" : "border-gray-700"
+            errors.message ? "border-cyan-400" : "border-gray-700"
           } rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none`}
         />
         {errors.message && (
-          <p className="text-[#ff6b6b] text-xs mt-1">This field is required.</p>
+          <p className="text-cyan-400 text-xs mt-1">This field is required.</p>
         )}
       </div>
 
       {errors.form && (
-        <p className="text-[#ff6b6b] text-sm">
+        <p className="text-cyan-400 text-sm">
           One or more fields have an error. Please check and try again.
         </p>
       )}

@@ -35,7 +35,7 @@ const PortfolioCard = ({
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 bg-[#ff014f] hover:bg-[#ff014f]/80 rounded-full flex items-center justify-center text-white transition-colors"
+              className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 rounded-full flex items-center justify-center text-white transition-all"
             >
               <FaExternalLinkAlt className="text-lg" />
             </a>
@@ -45,7 +45,7 @@ const PortfolioCard = ({
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 bg-[#ff014f] hover:bg-[#ff014f]/80 rounded-full flex items-center justify-center text-white transition-colors"
+              className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 rounded-full flex items-center justify-center text-white transition-all"
             >
               <FaGithub className="text-xl" />
             </a>
@@ -57,7 +57,7 @@ const PortfolioCard = ({
       <div className="p-6 space-y-4">
         {/* Category & Technologies */}
         <div className="flex items-center justify-between">
-          <span className="text-[#ff014f] text-xs uppercase tracking-wider font-semibold">{category}</span>
+          <span className="text-[#c4cfde] text-xs uppercase tracking-wider font-semibold">{category}</span>
           <div className="flex gap-2 flex-wrap justify-end">
             {technologies.slice(0, 3).map((tech, index) => (
               <span 
@@ -71,7 +71,7 @@ const PortfolioCard = ({
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-semibold text-white group-hover:text-[#ff014f] transition-colors">
+        <h3 className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-emerald-300 transition-all">
           {title}
         </h3>
 
