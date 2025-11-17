@@ -1,0 +1,8 @@
+const express = require('express');
+const router = express.Router();
+const contactController = require('../controllers/contact.controller');
+
+// POST /api/contact/send - Email göndər
+router.post('/send', contactController.sendEmail);
+
+module.exports = router;
