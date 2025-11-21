@@ -1,11 +1,4 @@
-interface ContactCardProps {
-  image: string;
-  name: string;
-  position: string;
-  description: string;
-  phone: string;
-  email: string;
-}
+import type { ContactCardProps } from "../../types/contactCard";
 
 export default function ContactCard({
   image,

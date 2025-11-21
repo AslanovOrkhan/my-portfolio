@@ -33,52 +33,143 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
-
+import coffeeShop from "../../assets/Cafena-Coffee-Shop.png";
+import hookahRestaurant from "../../assets/HUKA (2).png";
+import blogPlatform from "../../assets/blog.png";
+import gameImage from "../../assets/game.png";
+import weatherApp from "../../assets/weatherApp.png";
+import calendarApp from "../../assets/calendar.png";
+import playerApp from "../../assets/musicPlayer.png";
+import todolist from "../../assets/ToDoList.png";
+import type { PortfolioItem } from "../../types/portfolio";
+// Portfolio items array
+const portfolioItems: PortfolioItem[] = [
+  {
+    image: coffeeShop,
+    category: "WEB DEVELOPMENT",
+    title: "Coffee Shop Website",
+    description:
+      "A modern coffee shop website showcasing menu, location, and contact information.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://cafena-coffee-shop.vercel.app/",
+    githubLink: "https://github.com/AslanovOrkhan/cafena-coffee-shop.git",
+  },
+  {
+    image: hookahRestaurant,
+    category: "WEB DEVELOPMENT",
+    title: "Hookah Lounge Website",
+    description:
+      "A modern hookah restaurant website showcasing menu, location, and contact information.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://huka-bar.vercel.app/",
+    githubLink: "https://github.com/AslanovOrkhan/Hookah-Restaurant.git",
+  },
+  {
+    image: blogPlatform,
+    category: "WEB DEVELOPMENT",
+    title: "Blog Platform",
+    description:
+      "Blog platform with user authentication, post creation, and commenting features.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://chipper-macaron-99446a.netlify.app/#",
+    githubLink: "https://github.com/AslanovOrkhan/Blog-Website.git",
+  },
+  {
+    image: gameImage,
+    category: "WEB DEVELOPMENT",
+    title: "Weather App",
+    description:
+      "An interactive weather app providing real-time weather updates, forecasts, and location-based weather information. Features a clean interface and responsive design for seamless user experience.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://enchanting-zabaione-696ede.netlify.app/",
+    githubLink: "https://github.com/AslanovOrkhan/weather-app-js.git",
+  },
+  {
+    image: weatherApp,
+    category: "WEB DEVELOPMENT",
+    title: "tic-tac-toe Game",
+    description:
+      "An interactive tic-tac-toe game built with JavaScript, allowing two players to compete on a classic 3x3 grid. The game features a clean interface, real-time win detection, and highlights the winning combination. Perfect for practicing logic and having fun with friends.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://tic-tac-toe-game-eta-seven.vercel.app/",
+    githubLink: "https://github.com/AslanovOrkhan/tic-tac-toe-game.git",
+  },
+  {
+    image: calendarApp,
+    category: "WEB DEVELOPMENT",
+    title: "Calendar App",
+    description:
+      "Calendar application that allows users to view, add, and manage events seamlessly. Features a clean interface with month, week, and day views, along with event reminders and notifications to keep users organized and on schedule.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://js-calendar-iota.vercel.app/",
+    githubLink: "https://github.com/AslanovOrkhan/Js-Calendar.git",
+  },
+  {
+    image: playerApp,
+    category: "WEB DEVELOPMENT",
+    title: "Music Player",
+    description:
+      "A sleek music player application that allows users to play, pause, and skip tracks from their music library. Features a user-friendly interface with playlist management, volume control, and track progress visualization for an enhanced listening experience.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://javascript-music-player-five.vercel.app/",
+    githubLink: "https://github.com/AslanovOrkhan/Javascript-Music-Player.git",
+  },
+  {
+    image: todolist,
+    category: "WEB DEVELOPMENT",
+    title: "To-Do List App",
+    description:
+      "A simple and intuitive to-do list application that helps users organize their tasks effectively. Features include adding, editing, and deleting tasks, as well as marking them as complete. The app provides a clean interface and responsive design for easy task management on any device.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://js-to-do-list-eight.vercel.app/",
+    githubLink: "https://github.com/AslanovOrkhan/JS-ToDo-List.git",
+  }
+];
 const Home = () => {
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
-  const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
+  const [isServicesVisible, setIsServicesVisible] = useState(false);
   const [isPortfolioVisible, setIsPortfolioVisible] = useState(false);
   const [isContactVisible, setIsContactVisible] = useState(false);
-  
+
   useEffect(() => {
-    const aboutSection = document.getElementById('about');
-    const skillsSection = document.getElementById('skills');
-    const featuresSection = document.getElementById('features');
-    const portfolioSection = document.getElementById('portfolio');
-    const contactSection = document.getElementById('contact');
-    
+    const aboutSection = document.getElementById("about");
+    const skillsSection = document.getElementById("skills");
+    const servicesSection = document.getElementById("services");
+    const portfolioSection = document.getElementById("portfolio");
+    const contactSection = document.getElementById("contact");
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.target.id === 'about' && entry.isIntersecting) {
+          if (entry.target.id === "about" && entry.isIntersecting) {
             setIsAboutVisible(true);
           }
-          if (entry.target.id === 'skills' && entry.isIntersecting) {
+          if (entry.target.id === "skills" && entry.isIntersecting) {
             setIsSkillsVisible(true);
           }
-          if (entry.target.id === 'features' && entry.isIntersecting) {
-            setIsFeaturesVisible(true);
+          if (entry.target.id === "services" && entry.isIntersecting) {
+            setIsServicesVisible(true);
           }
-          if (entry.target.id === 'portfolio' && entry.isIntersecting) {
+          if (entry.target.id === "portfolio" && entry.isIntersecting) {
             setIsPortfolioVisible(true);
           }
-          if (entry.target.id === 'contact' && entry.isIntersecting) {
+          if (entry.target.id === "contact" && entry.isIntersecting) {
             setIsContactVisible(true);
           }
         });
       },
       { threshold: 0.3 }
     );
-    
+
     if (aboutSection) {
       observer.observe(aboutSection);
     }
     if (skillsSection) {
       observer.observe(skillsSection);
     }
-    if (featuresSection) {
-      observer.observe(featuresSection);
+    if (servicesSection) {
+      observer.observe(servicesSection);
     }
     if (portfolioSection) {
       observer.observe(portfolioSection);
@@ -86,7 +177,7 @@ const Home = () => {
     if (contactSection) {
       observer.observe(contactSection);
     }
-    
+
     return () => {
       if (aboutSection) {
         observer.unobserve(aboutSection);
@@ -94,8 +185,8 @@ const Home = () => {
       if (skillsSection) {
         observer.unobserve(skillsSection);
       }
-      if (featuresSection) {
-        observer.unobserve(featuresSection);
+      if (servicesSection) {
+        observer.unobserve(servicesSection);
       }
       if (portfolioSection) {
         observer.unobserve(portfolioSection);
@@ -109,7 +200,10 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-[#0a0a0a]  flex items-center w-full min-h-[95vh]  overflow-hidden lg:py-0 py-12 lg:px-16 px-3">
+      <section
+        className="bg-[#0a0a0a]  flex items-center w-full min-h-[95vh]  overflow-hidden lg:py-0 py-12 lg:px-16 px-3"
+        id="home"
+      >
         <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Side - Text Content */}
           <div className="space-y-6">
@@ -153,7 +247,7 @@ const Home = () => {
               <div className="flex gap-4">
                 {/* LinkedIn */}
                 <motion.a
-                  href="#"
+                  href="https://www.linkedin.com/in/orkhanaslanov"
                   className="w-14 h-14 bg-[#1a1a1a] flex items-center justify-center rounded-lg group"
                   whileHover={{
                     background:
@@ -174,7 +268,7 @@ const Home = () => {
 
                 {/* GitHub */}
                 <motion.a
-                  href="#"
+                  href="https://github.com/AslanovOrkhan"
                   className="w-14 h-14 bg-[#1a1a1a] flex items-center justify-center rounded-lg group"
                   whileHover={{
                     background:
@@ -195,7 +289,7 @@ const Home = () => {
 
                 {/* YouTube */}
                 <motion.a
-                  href="#"
+                  href="https://www.youtube.com/@TheCodeFather97"
                   className="w-14 h-14 bg-[#1a1a1a] flex items-center justify-center rounded-lg group"
                   whileHover={{
                     background:
@@ -216,7 +310,7 @@ const Home = () => {
 
                 {/* Instagram */}
                 <motion.a
-                  href="#"
+                  href="https://www.instagram.com/orkhan__1997/"
                   className="w-14 h-14 bg-[#1a1a1a] flex items-center justify-center rounded-lg group"
                   whileHover={{
                     background:
@@ -261,10 +355,14 @@ const Home = () => {
 
               <h2 className="text-4xl lg:text-5xl font-bold text-white">
                 {isAboutVisible ? (
-                  <Typewriter 
+                  <Typewriter
                     texts={[
-                      { text: "About Me", className: "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent" }
-                    ]} 
+                      {
+                        text: "About Me",
+                        className:
+                          "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent",
+                      },
+                    ]}
                     delay={100}
                   />
                 ) : (
@@ -273,39 +371,42 @@ const Home = () => {
               </h2>
 
               <p className="text-[#c4cfde] text-base leading-relaxed">
-                I am a frontend developer focused on building web applications. I
-                create responsive and modern interfaces using HTML, CSS, SCSS, and
-                Tailwind CSS. With JavaScript and TypeScript, I develop functional
-                and user-friendly experiences. I build component-based
-                applications using React.js and Next.js.
+                I am a frontend developer focused on building web applications.
+                I create responsive and modern interfaces using HTML, CSS, SCSS,
+                and Tailwind CSS. With JavaScript and TypeScript, I develop
+                functional and user-friendly experiences. I build
+                component-based applications using React.js and Next.js.
               </p>
 
               <p className="text-[#c4cfde] text-base leading-relaxed">
-                I also work with Node.js and Express.js for backend integration. I have experience with
-                both MongoDB and MySQL databases. I use Git for version control
-                and work well in team environments.
+                I also work with Node.js and Express.js for backend integration.
+                I have experience with both MongoDB and MySQL databases. I use
+                Git for version control and work well in team environments.
               </p>
 
               <div className="pt-4">
                 <a
-                  href="#"
+                  href="/cv.pdf"
+                  download
                   className="relative inline-block px-8 py-4 font-semibold uppercase tracking-wider text-sm z-10 before:content-[''] before:absolute before:w-full before:h-full before:rounded-md before:top-0 before:left-0 before:bg-gradient-to-br before:from-[#212428] before:to-[#16181c] before:-z-10"
                 >
-                  <span className="relative z-20 bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">DOWNLOAD MY CV</span>
+                  <span className="relative z-20 bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+                    DOWNLOAD MY CV
+                  </span>
                 </a>
               </div>
             </div>
             {/* Right Side - Image */}
             <div className="lg:px-6 px-0 order-2 lg:order-1">
-            <div className="shadow-[0_0_10px_rgba(156,163,175,0.6)] bg-[#212428] rounded-xl lg:p-12 p-6">
-              <div className="bg-black rounded-xl">
-                <img
-                  src="https://png.pngtree.com/png-vector/20240131/ourmid/pngtree-businessman-with-portfolio-worker-character-png-image_11578894.png"
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
+              <div className="shadow-[0_0_10px_rgba(156,163,175,0.6)] bg-[#212428] rounded-xl lg:p-12 p-6">
+                <div className="bg-black rounded-xl">
+                  <img
+                    src="https://png.pngtree.com/png-vector/20240131/ourmid/pngtree-businessman-with-portfolio-worker-character-png-image_11578894.png"
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -321,10 +422,14 @@ const Home = () => {
             </p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
               {isSkillsVisible ? (
-                <Typewriter 
+                <Typewriter
                   texts={[
-                    { text: "My Skills", className: "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent" }
-                  ]} 
+                    {
+                      text: "My Skills",
+                      className:
+                        "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent",
+                    },
+                  ]}
                   delay={100}
                 />
               ) : (
@@ -399,19 +504,23 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="bg-[#0f0f0f] py-20" id="features">
+      <section className="bg-[#0f0f0f] py-20" id="service">
         <div className="container mx-auto lg:px-6 px-3">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" id="services">
             <p className="text-[#c4cfde] text-sm tracking-[0.3em] uppercase mb-4">
               FEATURES
             </p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
-              {isFeaturesVisible ? (
-                <Typewriter 
+              {isServicesVisible ? (
+                <Typewriter
                   texts={[
-                    { text: "What I Do", className: "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent" }
-                  ]} 
+                    {
+                      text: "What I Do",
+                      className:
+                        "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent",
+                    },
+                  ]}
                   delay={100}
                 />
               ) : (
@@ -492,10 +601,14 @@ const Home = () => {
             </p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
               {isPortfolioVisible ? (
-                <Typewriter 
+                <Typewriter
                   texts={[
-                    { text: "My Portfolio", className: "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent" }
-                  ]} 
+                    {
+                      text: "My Portfolio",
+                      className:
+                        "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent",
+                    },
+                  ]}
                   delay={100}
                 />
               ) : (
@@ -512,89 +625,25 @@ const Home = () => {
             pagination={{ clickable: true }}
             loop={true}
             breakpoints={{
-              640: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
             }}
             className="pb-12"
           >
-            <SwiperSlide>
-              <PortfolioCard
-                image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
-                category="WEB DEVELOPMENT"
-                title="E-Commerce Platform"
-                description="Full-featured e-commerce platform built with React, Node.js and MongoDB. User authentication, product management and payment integration."
-                technologies={["React", "Node.js", "MongoDB", "Stripe"]}
-                demoLink="https://demo.com"
-                githubLink="https://github.com/username/project"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <PortfolioCard
-                image="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop"
-                category="MOBILE APP"
-                title="Fitness Tracking App"
-                description="Mobile fitness app built with React Native. Workout programs, nutrition tracker and progress analytics."
-                technologies={["React Native", "Firebase", "Redux"]}
-                demoLink="https://demo.com"
-                githubLink="https://github.com/username/project"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <PortfolioCard
-                image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
-                category="FULL STACK"
-                title="Task Management System"
-                description="Task management system for teams. Real-time updates, role-based permissions and analytics dashboard."
-                technologies={["Next.js", "TypeScript", "PostgreSQL"]}
-                demoLink="https://demo.com"
-                githubLink="https://github.com/username/project"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <PortfolioCard
-                image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
-                category="DATA VISUALIZATION"
-                title="Analytics Dashboard"
-                description="Business analytics dashboard with real-time data visualization. Interactive charts and reports."
-                technologies={["React", "D3.js", "Express.js"]}
-                demoLink="https://demo.com"
-                githubLink="https://github.com/username/project"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <PortfolioCard
-                image="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&h=400&fit=crop"
-                category="WEB APP"
-                title="Social Media Platform"
-                description="Social media platform with real-time messaging, post sharing and user profiles."
-                technologies={["Vue.js", "Socket.io", "MongoDB"]}
-                demoLink="https://demo.com"
-                githubLink="https://github.com/username/project"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <PortfolioCard
-                image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
-                category="API DEVELOPMENT"
-                title="RESTful API Service"
-                description="Scalable RESTful API with microservice architecture. Authentication, rate limiting and documentation."
-                technologies={["Node.js", "Express", "MySQL", "Docker"]}
-                demoLink="https://demo.com"
-                githubLink="https://github.com/username/project"
-              />
-            </SwiperSlide>
+            {portfolioItems.map((item, idx) => (
+              <SwiperSlide key={idx}>
+                <PortfolioCard
+                  image={item.image}
+                  category={item.category}
+                  title={item.title}
+                  description={item.description}
+                  technologies={item.technologies}
+                  demoLink={item.demoLink}
+                  githubLink={item.githubLink}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </section>
@@ -609,10 +658,14 @@ const Home = () => {
             </p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
               {isContactVisible ? (
-                <Typewriter 
+                <Typewriter
                   texts={[
-                    { text: "Contact With Me", className: "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent" }
-                  ]} 
+                    {
+                      text: "Contact With Me",
+                      className:
+                        "bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent",
+                    },
+                  ]}
                   delay={100}
                 />
               ) : (

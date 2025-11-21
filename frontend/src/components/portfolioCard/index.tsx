@@ -1,14 +1,6 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
-interface PortfolioCardProps {
-  image: string;
-  category: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  demoLink?: string;
-  githubLink?: string;
-}
+import type { PortfolioCardProps } from "../../types/portfolioCard";
 
 const PortfolioCard = ({ 
   image, 

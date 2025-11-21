@@ -1,13 +1,25 @@
-import { useState, useEffect } from 'react';
+ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,16 +91,8 @@ const Header = () => {
               PORTFOLIO
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#client" className="relative text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 font-medium group">
-              CLIENT
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#pricing" className="relative text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 font-medium group">
-              PRICING
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#blog" className="relative text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 font-medium group">
-              BLOG
+            <a href="#skills" className="relative text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 font-medium group">
+              SKİLLS
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a href="#contact" className="relative text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-400 font-medium group">
@@ -180,39 +184,6 @@ const Header = () => {
             <span className="relative z-10 text-[#c4cfde] group-hover:text-white font-medium text-base flex items-center gap-3 transition-colors">
               <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-emerald-400 transition-all"></span>
               PORTFOLIO
-            </span>
-          </a>
-
-          <a 
-            href="#client" 
-            onClick={() => setIsMenuOpen(false)}
-            className="group relative px-4 py-4 rounded-lg hover:bg-gradient-to-r hover:from-cyan-400/10 hover:to-emerald-400/10 border border-transparent hover:border-cyan-400/20 transition-all duration-300"
-          >
-            <span className="relative z-10 text-[#c4cfde] group-hover:text-white font-medium text-base flex items-center gap-3 transition-colors">
-              <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-emerald-400 transition-all"></span>
-              CLIENT
-            </span>
-          </a>
-
-          <a 
-            href="#pricing" 
-            onClick={() => setIsMenuOpen(false)}
-            className="group relative px-4 py-4 rounded-lg hover:bg-gradient-to-r hover:from-cyan-400/10 hover:to-emerald-400/10 border border-transparent hover:border-cyan-400/20 transition-all duration-300"
-          >
-            <span className="relative z-10 text-[#c4cfde] group-hover:text-white font-medium text-base flex items-center gap-3 transition-colors">
-              <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-emerald-400 transition-all"></span>
-              PRICING
-            </span>
-          </a>
-
-          <a 
-            href="#blog" 
-            onClick={() => setIsMenuOpen(false)}
-            className="group relative px-4 py-4 rounded-lg hover:bg-gradient-to-r hover:from-cyan-400/10 hover:to-emerald-400/10 border border-transparent hover:border-cyan-400/20 transition-all duration-300"
-          >
-            <span className="relative z-10 text-[#c4cfde] group-hover:text-white font-medium text-base flex items-center gap-3 transition-colors">
-              <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-emerald-400 transition-all"></span>
-              BLOG
             </span>
           </a>
 

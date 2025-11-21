@@ -1,7 +1,4 @@
-interface SkillCardProps {
-  icon: React.ReactNode;
-  name: string;
-}
+import type { SkillCardProps } from "../../types/skillCard";
 
 const SkillCard = ({ icon, name }: SkillCardProps) => {
   return (

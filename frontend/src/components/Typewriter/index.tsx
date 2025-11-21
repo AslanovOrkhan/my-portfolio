@@ -1,9 +1,6 @@
 import { useState, useEffect } from 'react';
 
-interface TypewriterProps {
-  texts: { text: string; className?: string }[];
-  delay?: number;
-}
+import type { TypewriterProps } from "../../types/typewriter";
 
 const Typewriter = ({ texts, delay = 50 }: TypewriterProps) => {
   const [displayedParts, setDisplayedParts] = useState<{ text: string; className?: string }[]>([]);

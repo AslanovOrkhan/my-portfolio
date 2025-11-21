@@ -1,8 +1,4 @@
-interface FeatureCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
+import type { FeatureCardProps } from "../../types/featureCard";
 
 const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   return (

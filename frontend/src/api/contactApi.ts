@@ -1,17 +1,5 @@
 // Contact form data interface
-export interface ContactFormData {
-  name: string;
-  phone: string;
-  email: string;
-  subject: string;
-  message: string;
-}
-
-// API response interface
-export interface ContactApiResponse {
-  success: boolean;
-  message: string;
-}
+import type { ContactFormData, ContactApiResponse } from "../types/contactApi";
 
 // Backend API URL
 const API_URL = 'http://localhost:5000/api/contact';
