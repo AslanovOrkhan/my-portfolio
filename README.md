@@ -84,95 +84,198 @@ git clone https://github.com/AslanovOrkhan/my-portfolio.git
 cd my-portfolio
 ```
 
-2. Navigate to frontend directory
+
+# Orkhan Aslanov Portfolio
+
+This is a full-stack personal portfolio project built with React (Vite), Tailwind CSS, and Node.js/Express. The project showcases my skills, projects, and contact information, and includes a backend for handling contact form submissions.
+
+## ✨ Features
+- Modern responsive design
+- Animated sections and smooth scrolling
+- Portfolio slider (Swiper.js)
+- Downloadable CV
+- Contact form with backend integration
+- Dark UI with Tailwind CSS
+- TypeScript type management
+
+## 🛠️ Tech Stack
+- **Frontend:** React, Vite, TypeScript, Tailwind CSS, Framer Motion, Swiper.js
+- **Backend:** Node.js, Express.js
+
+## 📁 Project Structure
+
+```
+orkhan-portfolio/
+├── frontend/         # Frontend (Vite + React)
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── types/
+│   │   └── ...
+│   ├── public/
+│   └── ...
+├── backend/          # Backend (Node.js + Express)
+│   ├── src/
+│   └── ...
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Frontend
 ```bash
 cd frontend
-```
-
-3. Install dependencies
-```bash
 npm install
-```
-
-4. Start development server
-```bash
 npm run dev
 ```
 
-5. Open your browser and visit `http://localhost:5173`
-
-### Build for Production
-
+### Backend
 ```bash
-npm run build
+cd backend
+npm install
+npm start
 ```
 
-The build files will be generated in the `dist` folder.
+## 🖥️ Backend (Node.js & Express)
 
-### Preview Production Build
+The `backend` folder contains the server-side code for handling contact form submissions and other API endpoints. It is built with Express.js and provides the following features:
 
-```bash
-npm run preview
+- Accepts contact form data from the frontend via the **/api/contact** route
+- Can be configured to send messages via email or store them in a database
+- Uses CORS, body-parser, and other Express middleware for security and parsing
+
+### Backend Folder Structure
+```
+backend/
+├── src/
+│   ├── server.js           # Main Express server file
+│   ├── config/             # Configuration files (e.g., environment variables)
+│   ├── controllers/        # API controller functions
+│   └── routes/             # API routes
+└── package.json
 ```
 
-## 📋 Available Scripts
+### Key Files and Features
+- **server.js** — Starts the Express server and connects all routes
+- **routes/contact.routes.js** — API endpoints for the contact form
+- **controllers/contact.controller.js** — Handles contact form data processing and sending
+- **config/** — Used for email sending or other configuration
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+### Running the Backend
+```bash
+cd backend
+npm install
+npm start
+```
 
-## 🎨 Customization
-
-### Colors
-The project uses a custom color palette defined in the Tailwind CSS configuration. Main colors:
-- Primary: Cyan (#22d3ee) to Emerald (#34d399) gradient
-- Background: Dark (#0a0a0a)
-- Text: Light gray (#c4cfde)
-
-### Fonts
-The project uses system fonts for optimal performance.
-
-## 📱 Sections
-
-1. **Hero Section** - Introduction with animated typewriter effect
-2. **About Section** - Personal information and CV download
-3. **Skills Section** - Technical skills showcase
-4. **Features Section** - Services offered with carousel
-5. **Portfolio Section** - Project showcase with custom pagination
-6. **Contact Section** - Contact form and information
-
-## 🌟 Key Features Implementation
-
-### Scroll-Triggered Animations
-All major section headings have scroll-triggered typewriter animations using IntersectionObserver API.
-
-### Auto-Hide Header
-Smart header that automatically hides when scrolling down and shows when scrolling up.
-
-### Smooth Scrolling
-Smooth scroll behavior implemented throughout the site.
-
-### Custom Swiper Pagination
-Beautiful gradient pagination dots for portfolio slider.
-
-### Responsive Navigation
-Mobile-friendly navigation with smooth slide-in menu.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📧 Contact
-
-Orkhan Aslanov - [GitHub](https://github.com/AslanovOrkhan)
-
-Project Link: [https://github.com/AslanovOrkhan/my-portfolio](https://github.com/AslanovOrkhan/my-portfolio)
+### Note
+The backend can run locally or on a server. If you deploy only the frontend to platforms like Vercel or Netlify, you should host the backend separately (e.g., Render, Heroku, etc.).
 
 ---
+## 🌐 Deployment
+The frontend can be deployed as a static site to Vercel, Netlify, or other platforms. For the backend, you can use Vercel serverless functions or host it on a separate server.
 
-⭐ If you like this project, please give it a star on GitHub!
+## 📸 Demo
+Live demo: [Demo Link](https://your-vercel-link.vercel.app/)
+
+## 📬 Contact
+- Email: orkhan.aslanov@example.com
+- LinkedIn: [linkedin.com/in/orkhanaslanov](https://www.linkedin.com/in/orkhanaslanov)
+- GitHub: [github.com/AslanovOrkhan](https://github.com/AslanovOrkhan)
+
+---
+> © 2025 Orkhan Aslanov. All rights reserved.
+- Portfolio slider (Swiper.js)
+- Downloadable CV
+- Contact form with backend integration
+- Dark UI with Tailwind CSS
+- TypeScript type management
+
+## 🛠️ Tech Stack
+- **Frontend:** React, Vite, TypeScript, Tailwind CSS, Framer Motion, Swiper.js
+- **Backend:** Node.js, Express.js
+
+## 📁 Project Structure
+
+```
+orkhan-portfolio/
+├── frontend/         # Frontend (Vite + React)
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── types/
+│   │   └── ...
+│   ├── public/
+│   └── ...
+├── backend/          # Backend (Node.js + Express)
+│   ├── src/
+│   └── ...
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend
+```bash
+cd backend
+npm install
+npm start
+```
+
+
+## 🖥️ Backend (Node.js & Express)
+
+Backend qovluğu layihənin server hissəsini təşkil edir və əsasən əlaqə formundan gələn mesajların göndərilməsi və saxlanılması üçün istifadə olunur. Burada Express.js ilə REST API yaradılıb və aşağıdakı əsas imkanlar mövcuddur:
+
+- **/api/contact** route-u vasitəsilə frontend-dən gələn əlaqə formu məlumatlarını qəbul edir
+- Gələn mesajları email və ya verilənlər bazasına göndərmək üçün konfiqurasiya oluna bilər
+- Əlavə olaraq, təhlükəsizlik üçün CORS, body-parser və digər Express middleware-lərdən istifadə olunur
+
+### Backend Qovluq Strukturu
+```
+backend/
+├── src/
+│   ├── server.js           # Express serverin əsas faylı
+│   ├── config/             # Konfiqurasiya faylları (məs. environment variables)
+│   ├── controllers/        # API üçün controller funksiyaları
+│   └── routes/             # API route-ları
+└── package.json
+```
+
+### Əsas Fayllar və İmkanlar
+- **server.js** — Express serveri işə salır və bütün route-ları birləşdirir
+- **routes/contact.routes.js** — Əlaqə formu üçün API endpoint-ləri
+- **controllers/contact.controller.js** — Əlaqə formundan gələn məlumatların işlənməsi və göndərilməsi
+- **config/** — Emaillə göndərmə və ya digər konfiqurasiya üçün istifadə olunur
+
+### Backend-i İşə Salmaq
+```bash
+cd backend
+npm install
+npm start
+```
+
+### Qeyd
+Backend lokalda və ya serverdə işləyə bilər. Əgər Vercel və ya Netlify kimi platformalarda yalnız frontend deploy edirsinizsə, backend-i ayrıca serverdə host etməlisiniz (məsələn, Render, Heroku və s.).
+
+---
+## 🌐 Deployment
+Frontend as a static site can be deployed to Vercel, Netlify və ya digər platformalara. Backend üçün Vercel serverless functions və ya ayrıca server istifadə oluna bilər.
+
+## 📸 Demo
+Live demo: [Demo Link](https://your-vercel-link.vercel.app/)
+
+## 📬 Contact
+- Email: orkhan.aslanov@example.com
+- LinkedIn: [linkedin.com/in/orkhanaslanov](https://www.linkedin.com/in/orkhanaslanov)
+- GitHub: [github.com/AslanovOrkhan](https://github.com/AslanovOrkhan)
+
+---
+> © 2025 Orkhan Aslanov. All rights reserved.
