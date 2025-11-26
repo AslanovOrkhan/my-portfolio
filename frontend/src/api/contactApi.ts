@@ -2,7 +2,7 @@
 import type { ContactFormData, ContactApiResponse } from "../types/contactApi";
 
 // Backend API URL
-const API_URL = 'http://localhost:5000/api/contact';
+const API_URL = 'https://my-portfolio-xtdc.onrender.com/api/contact';
 
 // Send contact form to backend
 export const sendContactForm = async (
