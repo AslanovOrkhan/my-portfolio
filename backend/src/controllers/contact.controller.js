@@ -13,16 +13,15 @@ exports.sendEmail = async (req, res) => {
       });
     }
 
-    // Email konfiqurasiyası
+    // Email konfiqurasiyası (SendGrid SMTP)
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
       },
-      tls: {
-        rejectUnauthorized: false
-      }
+      secure: false // 587 üçün false, 465 üçün true
     });
 
     // Email məzmunu
