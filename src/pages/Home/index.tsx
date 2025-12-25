@@ -386,7 +386,7 @@ const Home = () => {
 
               <div className="pt-4">
                 <a
-                  href="/cv.pdf"
+                  href="/orkhan.pdf"
                   download
                   className="relative inline-block px-8 py-4 font-semibold uppercase tracking-wider text-sm z-10 before:content-[''] before:absolute before:w-full before:h-full before:rounded-md before:top-0 before:left-0 before:bg-linear-to-br before:from-[#212428] before:to-[#16181c] before:-z-10"
                 >
@@ -677,12 +677,12 @@ const Home = () => {
           {/* Contact Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <ContactCard
-              image="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=400&fit=crop"
-              name="Nevine Acotanza"
-              position="Chief Operating Officer"
+              image="https://media.istockphoto.com/id/2188211582/photo/contact-us-or-customer-support-hotline-businessman-touching-on-virtual-screen-contact-icons.jpg?s=612x612&w=0&k=20&c=aL_OH2_1_qoxRz1yaC2x1gASFRLFr7IXqO7QmmZ_Y_8="
+              name="Orkhan Aslanov"
+              position="Frontend Developer"
               description="I am available for freelance work. Connect with me via and call in to my account"
-              phone="+01234567890"
-              email="admin@example.com"
+              phone="+994558794091"
+              email="aslan.orxan.1997@gmail.com"
             />
             <div className="bg-[#212121] rounded-lg lg:p-8 px-3 py-6">
               <ContactForm />
